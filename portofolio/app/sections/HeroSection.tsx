@@ -13,9 +13,13 @@ const HeroSection = () => {
                     alt="Person peeking from behind laptop" 
                     className="size-[100px]"
                 />
+
+                <div className="bg-gray-950 border border-gray-800 rounded-lg px-1.5 py-1.5">
+                    <div className="text-sm">Marios Polyzoidis</div>
+                </div>
             </div>
 
-            <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+            <h1 className="text-3xl text-center mt-8 font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
 
             <p> 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -25,7 +29,7 @@ const HeroSection = () => {
             <div>
                 <button>
                     <span>Explore My Work</span>
-                    <ArrowDown />
+                    <ArrowDown className="fill-white"/>
                 </button>
 
                 <button>
