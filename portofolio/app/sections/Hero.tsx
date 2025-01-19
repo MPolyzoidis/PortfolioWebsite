@@ -1,18 +1,13 @@
 import memojiImage from "../images/memoji.png"
 import ArrowDown from "../images/downArrow.svg"
 import Image from 'next/image'
-import background from '../images/background.png'
+import BackgroundImage from "../components/BackgroundImage"
 
-const HeroSection = () => {
+const Hero = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0">
 
-        {/* Background Image */}
-        <Image 
-            src={background} 
-            alt="Background" 
-            className="absolute inset-0 -z-30 opacity-5 h-screen max-w-[1920px] overflow-hidden">        
-        </Image>
+        <BackgroundImage />
 
         <div className='container'>
 
@@ -54,4 +49,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default Hero
