@@ -1,13 +1,13 @@
 import memojiImage from "../images/memoji.png"
 import ArrowDown from "../images/downArrow.svg"
 import Image from 'next/image'
-import BackgroundImage from "../components/BackgroundImage"
+import Background from "../components/Background"
 
 const Hero = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0">
 
-        <BackgroundImage />
+        <Background />
 
         <div className='container'>
 
