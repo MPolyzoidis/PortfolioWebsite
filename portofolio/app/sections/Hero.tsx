@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
             
             <div className="max-w-lg mx-auto">
-                <h1 className="text-3xl md:text-5xl text-center mt-8 font-bold tracking-wide">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+                <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 font-bold tracking-wide">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
 
                 <p className="mt-4 text-center text-white/60 md:text-lg"> 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
