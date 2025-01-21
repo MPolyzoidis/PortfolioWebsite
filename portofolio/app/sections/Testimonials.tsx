@@ -1,6 +1,8 @@
+import Background from "../components/Background"
 import SectionHeader from "../components/SectionHeader"
 import avatar from "../images/memoji.png"
 import Image from 'next/image'
+import Card from "../components/Card"
 
 const testimonials = [
     {
@@ -19,29 +21,35 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <div>
+    <div className="py-16 relative z-0">
 
-        <SectionHeader 
-            eyebrow="Happy Clients" 
-            title="What Clients Say About Me" 
-            description="Don't just take my word for it. See what clients have to say about my work"
-        />
+        <Background />
 
-        <div>
+        <div className="container">
 
-            {testimonials.map(testimonial => (
+            <SectionHeader 
+                eyebrow="Happy Clients" 
+                title="What Clients Say About Me" 
+                description="Don't just take my word for it. See what clients have to say about my work"
+            />
 
-                <div key={testimonial.name}>
+            <div>
 
-                    <Image src={testimonial.avatar} alt={testimonial.name} />
+                {testimonials.map(testimonial => (
 
-                    <div>{testimonial.name}</div>
-                    <div>{testimonial.position}</div>
-                    <p>{testimonial.text}</p>
+                    <Card key={testimonial.name} className="bg-gray-800 bg-opacity-35 rounded-3xl p-6">
 
-                </div>
+                        <Image src={testimonial.avatar} alt={testimonial.name} />
 
-            ))}
+                        <div>{testimonial.name}</div>
+                        <div>{testimonial.position}</div>
+                        <p>{testimonial.text}</p>
+
+                    </Card>
+
+                ))}
+
+            </div>
 
         </div>
 
