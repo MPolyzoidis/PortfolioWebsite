@@ -2,6 +2,7 @@ import Image from 'next/image'
 import placeholder from "../images/placeholder.png"
 import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 import Background from "../components/Background"
+import SectionHeader from '../components/SectionHeader'
 
 const portofolioProjects = [
     {
@@ -52,13 +53,11 @@ const Projects = () => {
 
             <div className="container">
 
-                <div className="flex justify-center">
-                    <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">Lorem Ipsum</p>
-                </div>
-
-                <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
-
-                <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <SectionHeader 
+                    eyebrow="Lorem Ipsum"
+                    title="Featured Projects"
+                    description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+                />
 
                 <div className="flex flex-col gap-20 mt-10 md:mt-20">
                     {portofolioProjects.map(project => (
