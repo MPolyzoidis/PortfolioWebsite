@@ -21,7 +21,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <div className="py-16 lg:py-24 relative z-0">
+    <div className="py-20 lg:py-24 relative z-0">
 
         <Background />
 

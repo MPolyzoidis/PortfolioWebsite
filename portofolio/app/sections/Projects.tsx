@@ -48,7 +48,7 @@ const portofolioProjects = [
 
 const Projects = () => {
     return (
-        <section className="pb-16 lg:py-24 relative z-0">
+        <section className="pb-20 lg:py-24 relative z-0">
 
             <Background />
 

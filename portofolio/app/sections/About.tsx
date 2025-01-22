@@ -2,6 +2,7 @@
 import Background from "../components/Background"
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
+import CardHeader from "../components/CardHeader"
 
 //Images Imports
 import Image from 'next/image'
@@ -124,27 +125,27 @@ const toolboxItems = [
 
 const hobbies = [
     {
-        title:"Ipsum",
+        title:"Ipsum1",
         emoji:"⚽"
     },
     {
-        title:"Ipsum",
+        title:"Ipsum2",
         emoji:"⚽"
     },
     {
-        title:"Ipsum",
+        title:"Ipsum3",
         emoji:"⚽"
     },
     {
-        title:"Ipsum",
+        title:"Ipsum4",
         emoji:"⚽"
     },
     {
-        title:"Ipsum",
+        title:"Ipsum5",
         emoji:"⚽"
     },
     {
-        title:"Ipsum",
+        title:"Ipsum6",
         emoji:"⚽"
     },
 ]
@@ -152,80 +153,87 @@ const hobbies = [
 
 const AboutSection = () => {
   return (
-    <div className="pb-96 relative z-0">
+    <div className="py-20 relative z-0">
 
-        <Background />
+        <div className="container">
 
-        <SectionHeader 
-            eyebrow="Happy Clients" 
-            title="What Clients Say About Me" 
-            description="Don't just take my word for it. See what clients have to say about my work"
-        />
+            <Background />
 
-        <Card>
-            <div>
+            <SectionHeader 
+                eyebrow="About Me" 
+                title="A Glimpse Into My World" 
+                description="Don't just take my word for it. See what clients have to say about my work"
+            />
 
-                <ArrowDown className="fill-white size-4"/>
+            <div className="mt-20">
 
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <Card className="h-[320px]">
+                    <CardHeader 
+                        title="Lorem Ipsum" 
+                        description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+                    />
 
-                <Image 
-                    src={placeholder} 
-                    alt="Placeholder" 
-                />
+                    <div className="w-40 mx-auto mt-8">
+                        <Image 
+                            src={placeholder} 
+                            alt="Placeholder" 
+                        />
+                    </div>
+ 
+                </Card>
 
-            </div>
-        </Card>
+                <Card>
+                    <div>
 
-        <Card>
-            <div>
+                        <CardHeader 
+                            title="My Toolbox" 
+                            description="Explore the technologies I use to create exceptional digital experiences"
+                        />
 
-                <ArrowDown className="fill-white size-4"/>
+                        <div>
 
-                <h3>My Toolbox</h3>
-                <p>Explore the technologies I use to create exceptional digital experiences</p>
+                            {toolboxItems.map(item => (
 
-                <div>
+                                <div key={item.title}>
 
-                    {toolboxItems.map(item => (
+                                    <TechIcon component={item.iconType} />
+                                    <span>{item.title}</span>
 
-                        <div key={item.title}>
+                                </div>
 
-                            <TechIcon component={item.iconType} />
-                            <span>{item.title}</span>
+                            ))}
 
                         </div>
 
-                    ))}
-
-                </div>
-
-            </div>
-        </Card>
-
-        <Card>
-            <div>
-                <ArrowDown className="fill-white size-4"/>
-
-                <h3>Beyond the Code</h3>
-                <p>Explore my interests and hobbies beyond the digital realm</p>
-            </div>
-
-            <div>
-                {hobbies.map(hobby => (
-                    <div key={hobby.title}>
-                        <span>{hobby.title}</span>
-                        <span>{hobby.emoji}</span>
                     </div>
-                ))}
-            </div>
-        </Card>
+                </Card>
 
-        <Card>
-            <Image src={mapImage} alt="map" />
-            <Image src={memojiSmile} alt="Smiling memoji" />
-        </Card>
+                <Card>
+                    <div>
+                        <CardHeader 
+                            title="Beyond the Code" 
+                            description="Explore my interests and hobbies beyond the digital realm"
+                        />
+                    </div>
+
+                    <div>
+                        {hobbies.map(hobby => (
+                            <div key={hobby.title}>
+                                <span>{hobby.title}</span>
+                                <span>{hobby.emoji}</span>
+                            </div>
+                        ))}
+                    </div>
+                </Card>
+
+                <Card>
+                    <Image src={mapImage} alt="map" />
+                    <Image src={memojiSmile} alt="Smiling memoji" />
+                </Card>
+
+            </div>
+
+        </div>
 
     </div>
 
