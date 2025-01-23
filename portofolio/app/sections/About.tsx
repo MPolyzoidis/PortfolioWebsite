@@ -190,14 +190,14 @@ const AboutSection = () => {
                             description="Explore the technologies I use to create exceptional digital experiences"
                         />
 
-                        <div>
+                        <div className="p-3">
 
                             {toolboxItems.map(item => (
 
-                                <div key={item.title}>
+                                <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
 
                                     <TechIcon component={item.iconType} />
-                                    <span>{item.title}</span>
+                                    <span className="font-semibold">{item.title}</span>
 
                                 </div>
 
