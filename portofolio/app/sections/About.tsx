@@ -34,7 +34,10 @@ import UnityIcon from "../images/TechIcons/unity-icon.svg"
 import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
+import ExpendableCard from "../components/ExpandableCard"
 
+//Other Imports
+import {motion} from "framer-motion";
 
 const toolboxItems = [
     {
@@ -182,31 +185,29 @@ const AboutSection = () => {
  
                 </Card>
 
-                <Card>
-                    <div>
+                <ExpendableCard>
 
-                        <CardHeader 
-                            title="My Toolbox" 
-                            description="Explore the technologies I use to create exceptional digital experiences"
-                        />
+                    <CardHeader 
+                        title="My Toolbox" 
+                        description="Explore the technologies I use to create exceptional digital experiences"
+                    />
 
-                        <div className="p-3">
+                    <div className="pt-3">
 
-                            {toolboxItems.map(item => (
+                        {toolboxItems.map(item => (
 
-                                <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+                            <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
 
-                                    <TechIcon component={item.iconType} />
-                                    <span className="font-semibold">{item.title}</span>
+                                <TechIcon component={item.iconType} />
+                                <span className="font-semibold">{item.title}</span>
 
-                                </div>
+                            </div>
 
-                            ))}
-
-                        </div>
+                        ))}
 
                     </div>
-                </Card>
+
+                </ExpendableCard>
 
                 <Card>
                     <div>
