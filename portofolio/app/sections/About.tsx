@@ -124,27 +124,46 @@ const toolboxItems = [
 const hobbies = [
     {
         title:"Ipsum1",
-        emoji:"⚽"
+        emoji:"⚽",
+        left: "5%",
+        top: "5%",
+
     },
     {
         title:"Ipsum2",
-        emoji:"⚽"
-    },
-    {
-        title:"Ipsum3",
-        emoji:"⚽"
+        emoji:"⚽",
+        left: "50%",
+        top: "5%",
     },
     {
         title:"Ipsum4",
-        emoji:"⚽"
+        emoji:"⚽",
+        left: "35%",
+        top: "40%",
+    },
+    {
+        title:"Ipsum3",
+        emoji:"⚽",
+        left: "10%",
+        top: "35%",
     },
     {
         title:"Ipsum5",
-        emoji:"⚽"
+        emoji:"⚽",
+        left: "70%",
+        top: "45%",
     },
     {
         title:"Ipsum6",
-        emoji:"⚽"
+        emoji:"⚽",
+        left: "5%",
+        top: "65%",
+    },
+    {
+        title:"Ipsum7",
+        emoji:"⚽",
+        left: "45%",
+        top: "70%",
     },
 ]
 
@@ -204,22 +223,34 @@ const AboutSection = () => {
 
                 </ExpandableCard>
 
-                <Card>
-                    <div>
+                <Card className="h-[320px] p-0 flex flex-col">
+
+                    <div className="p-6">
                         <CardHeader 
                             title="Beyond the Code" 
                             description="Explore my interests and hobbies beyond the digital realm"
                         />
                     </div>
 
-                    <div>
+                    <div className="relative flex-1">
+
                         {hobbies.map(hobby => (
-                            <div key={hobby.title}>
-                                <span>{hobby.title}</span>
+
+                            <div 
+                                key={hobby.title} 
+                                className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
+                                style={{left: hobby.left, top: hobby.top}}>
+
+                                <span className="font-medium text-gray-950">{hobby.title}</span>
+
                                 <span>{hobby.emoji}</span>
+
                             </div>
+
                         ))}
+
                     </div>
+
                 </Card>
 
                 <Card className="h-[320px] p-0">

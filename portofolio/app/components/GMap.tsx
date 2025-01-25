@@ -20,7 +20,7 @@ const Gmap = () => {
                     fullscreenControl={false}
                     streetViewControl={false}/>
                 <AdvancedMarker position={position}>
-                    <Image src={memojiSmile} alt="" className="size-20 translate-y-3 translate-x-2 bg-gray-950/90 rounded-full"/>
+                    <Image src={memojiSmile} alt="" className="size-10 -translate-y-1 bg-gray-950/90 rounded-full"/>
                 </AdvancedMarker>
             </div>
         </APIProvider>
