@@ -1,5 +1,5 @@
 import memojiImage from "../images/memoji.png"
-import ArrowDown from "../images/downArrow.svg"
+import ArrowDown from "../images/arrow-down-solid.svg"
 import Image from 'next/image'
 import Background from "../components/Background"
 

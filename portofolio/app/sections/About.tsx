@@ -34,10 +34,7 @@ import UnityIcon from "../images/TechIcons/unity-icon.svg"
 import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
-import ExpendableCard from "../components/ExpandableCard"
-
-//Other Imports
-import {motion} from "framer-motion";
+import ExpandableCard from "../components/ExpandableCard"
 
 const toolboxItems = [
     {
@@ -185,14 +182,14 @@ const AboutSection = () => {
  
                 </Card>
 
-                <ExpendableCard>
+                <ExpandableCard>
 
                     <CardHeader 
                         title="My Toolbox" 
                         description="Explore the technologies I use to create exceptional digital experiences"
                     />
 
-                    <div className="pt-3">
+                    <div className="pt-5">
 
                         {toolboxItems.map(item => (
 
@@ -207,7 +204,7 @@ const AboutSection = () => {
 
                     </div>
 
-                </ExpendableCard>
+                </ExpandableCard>
 
                 <Card>
                     <div>
