@@ -1,5 +1,7 @@
 "use client";
 import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps"
+import Image from 'next/image'
+import memojiSmile from "../images/memoji-smile.png"
 
 const Gmap = () => {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '';
@@ -17,7 +19,9 @@ const Gmap = () => {
                     mapTypeControl={false}
                     fullscreenControl={false}
                     streetViewControl={false}/>
-                <AdvancedMarker position={position} />
+                <AdvancedMarker position={position}>
+                    <Image src={memojiSmile} alt="" className="size-20 translate-y-3 translate-x-2 bg-gray-950/90 rounded-full"/>
+                </AdvancedMarker>
             </div>
         </APIProvider>
     )
