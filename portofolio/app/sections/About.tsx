@@ -6,10 +6,7 @@ import CardHeader from "../components/CardHeader"
 
 //Images Imports
 import Image from 'next/image'
-import ArrowDown from "../images/downArrow.svg"
 import placeholder from "../images/placeholder.png"
-import mapImage from "../images/map.png"
-import memojiSmile from "../images/memoji-smile.png"
 
 //Toolbox Icons Imports
 import CSSIcon from "../images/TechIcons/css3-icon.svg"
