@@ -165,7 +165,7 @@ const AboutSection = () => {
                 description="Don't just take my word for it. See what clients have to say about my work"
             />
 
-            <div className="mt-20">
+            <div className="mt-20 flex flex-col gap-6">
 
                 <Card className="h-[320px]">
                     <CardHeader 
