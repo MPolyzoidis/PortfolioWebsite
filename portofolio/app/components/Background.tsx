@@ -6,7 +6,7 @@ const Background = () => {
         <motion.div 
             className="absolute inset-0 -z-30 opacity-5 h-full w-full overflow-hidden bg-[url('/background.png')] bg-[length:100%_auto] bg-repeat-y bg-top"
             layout
-            transition={{ duration: 2, ease: 'easeInOut' }}
+            transition={{ duration: 0.75, ease: 'easeInOut' }}
             >
         </motion.div>
     )

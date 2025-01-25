@@ -35,6 +35,7 @@ import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
 import ExpandableCard from "../components/ExpandableCard"
+import Gmap from "../components/GMap"
 
 const toolboxItems = [
     {
@@ -165,7 +166,7 @@ const AboutSection = () => {
                 description="Don't just take my word for it. See what clients have to say about my work"
             />
 
-            <div className="mt-20 flex flex-col gap-6">
+            <div className="mt-20 flex flex-col gap-8">
 
                 <Card className="h-[320px]">
                     <CardHeader 
@@ -224,9 +225,8 @@ const AboutSection = () => {
                     </div>
                 </Card>
 
-                <Card>
-                    <Image src={mapImage} alt="map" />
-                    <Image src={memojiSmile} alt="Smiling memoji" />
+                <Card className="h-[320px] p-0">
+                    <Gmap />
                 </Card>
 
             </div>
