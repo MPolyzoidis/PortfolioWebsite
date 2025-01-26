@@ -33,6 +33,7 @@ import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
 import ExpandableCard from "../components/ExpandableCard"
 import Gmap from "../components/GMap"
+import ToolboxRondo from "../components/ToolboxRondo"
 
 const toolboxItems = [
     {
@@ -199,7 +200,7 @@ const AboutSection = () => {
  
                 </Card>
 
-                <ExpandableCard>
+                {/* <ExpandableCard>
 
                     <CardHeader 
                         title="My Toolbox" 
@@ -221,7 +222,21 @@ const AboutSection = () => {
 
                     </div>
 
-                </ExpandableCard>
+                </ExpandableCard> */}
+
+                <Card className="p-0">
+
+                    <CardHeader 
+                        title="My Toolbox" 
+                        description="Explore the technologies I use to create exceptional digital experiences"
+                        className="px-6 pt-6"
+                    />
+
+                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6"/>
+                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6"/>
+                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6 mb-6"/>
+
+                </Card>
 
                 <Card className="h-[320px] p-0 flex flex-col">
 

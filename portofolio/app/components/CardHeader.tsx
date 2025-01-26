@@ -1,8 +1,9 @@
+import { twMerge } from "tailwind-merge";
 import ArrowDown from "../images/downArrow.svg"
 
-const CardHeader = ( { title, description } : { title: string, description: string } ) => {
+const CardHeader = ( { title, description, className } : { title: string, description: string; className?: string; } ) => {
     return (
-        <div className="flex flex-col">
+        <div className={ twMerge("flex flex-col", className )}>
             <div className="inline-flex items-center gap-2">
                 <ArrowDown className="fill-emerald-300 size-9"/>
                 <h3 className="font-serif text-3xl">{title}</h3>
