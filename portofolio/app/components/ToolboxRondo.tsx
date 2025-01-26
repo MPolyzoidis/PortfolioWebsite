@@ -2,11 +2,15 @@ import { twMerge } from "tailwind-merge";
 import TechIcon from "./TechIcon"
 
 
-const ToolboxRondo = ({ toolboxItems, className } : { toolboxItems : { title: string; iconType: React.ElementType; } [];  className?: string; } ) => {
+const ToolboxRondo = (
+        { toolboxItems, className, itemsWrapperClassName } : 
+        { toolboxItems : { title: string; iconType: React.ElementType; } [];  className?: string; itemsWrapperClassName?: string } 
+    ) => {
+
     return (
         <div className={twMerge("flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]", className)}>
 
-            <div className="flex flex-none py-0.5 gap-6">
+            <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6", itemsWrapperClassName)}>
 
                 {toolboxItems.map(item => (
 

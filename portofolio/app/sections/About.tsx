@@ -3,6 +3,9 @@ import Background from "../components/Background"
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
 import CardHeader from "../components/CardHeader"
+import ExpandableCard from "../components/ExpandableCard"
+import Gmap from "../components/GMap"
+import ToolboxRondo from "../components/ToolboxRondo"
 
 //Images Imports
 import Image from 'next/image'
@@ -31,9 +34,6 @@ import UnityIcon from "../images/TechIcons/unity-icon.svg"
 import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
-import ExpandableCard from "../components/ExpandableCard"
-import Gmap from "../components/GMap"
-import ToolboxRondo from "../components/ToolboxRondo"
 
 const toolboxItems = [
     {
@@ -171,7 +171,7 @@ const hobbies = [
 
 const AboutSection = () => {
   return (
-    <div className="py-20 relative z-0">
+    <div className="py-20 lg:py-28 relative z-0">
 
         <div className="container">
 
@@ -185,92 +185,104 @@ const AboutSection = () => {
 
             <div className="mt-20 flex flex-col gap-8">
 
-                <Card className="h-[320px]">
-                    <CardHeader 
-                        title="Lorem Ipsum" 
-                        description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-                    />
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
-                    <div className="w-40 mx-auto mt-8">
-                        <Image 
-                            src={placeholder} 
-                            alt="Placeholder" 
+                    <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1">
+                        <CardHeader 
+                            title="Lorem Ipsum" 
+                            description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
                         />
-                    </div>
- 
-                </Card>
 
-                {/* <ExpandableCard>
+                        <div className="w-40 mx-auto mt-2 md:mt-0">
+                            <Image 
+                                src={placeholder} 
+                                alt="Placeholder" 
+                            />
+                        </div>
+    
+                    </Card>
 
-                    <CardHeader 
-                        title="My Toolbox" 
-                        description="Explore the technologies I use to create exceptional digital experiences"
-                    />
+                    {/* This is a div that serves the purpose of displaying the ExpandableCard on small viewports and the Card on medium and large viewports through block and hidden */}
+                    <div className="md:col-span-3 lg:col-span-2">
 
-                    <div className="pt-5">
+                        <ExpandableCard className="block md:hidden">
 
-                        {toolboxItems.map(item => (
+                            <CardHeader 
+                                title="My Toolbox" 
+                                description="Explore the technologies I use to create exceptional digital experiences"
+                            />
 
-                            <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+                            <div className="px-2">
 
-                                <TechIcon component={item.iconType} />
-                                <span className="font-semibold">{item.title}</span>
+                                {toolboxItems.map(item => (
+
+                                    <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+
+                                        <TechIcon component={item.iconType} />
+                                        <span className="font-semibold">{item.title}</span>
+
+                                    </div>
+
+                                ))}
 
                             </div>
 
-                        ))}
+                        </ExpandableCard>
+
+                        <Card className="hidden md:block">
+
+                            <CardHeader 
+                                title="My Toolbox" 
+                                description="Explore the technologies I use to create exceptional digital experiences"
+                                className=""
+                            />
+
+                            <ToolboxRondo toolboxItems={toolboxItems} className=""/>
+                            <ToolboxRondo toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
+                            <ToolboxRondo toolboxItems={toolboxItems} className="mt-6 mb-6"/>
+
+                        </Card>
 
                     </div>
 
-                </ExpandableCard> */}
+                </div>
 
-                <Card className="p-0">
+                <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
 
-                    <CardHeader 
-                        title="My Toolbox" 
-                        description="Explore the technologies I use to create exceptional digital experiences"
-                        className="px-6 pt-6"
-                    />
+                    <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
 
-                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6"/>
-                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6"/>
-                    <ToolboxRondo toolboxItems={toolboxItems} className="mt-6 mb-6"/>
-
-                </Card>
-
-                <Card className="h-[320px] p-0 flex flex-col">
-
-                    <div className="p-6">
                         <CardHeader 
                             title="Beyond the Code" 
                             description="Explore my interests and hobbies beyond the digital realm"
                         />
-                    </div>
 
-                    <div className="relative flex-1">
+                        <div className="relative flex-1">
 
-                        {hobbies.map(hobby => (
+                            {hobbies.map(hobby => (
 
-                            <div 
-                                key={hobby.title} 
-                                className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
-                                style={{left: hobby.left, top: hobby.top}}>
+                                <div 
+                                    key={hobby.title} 
+                                    className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
+                                    style={{left: hobby.left, top: hobby.top}}>
 
-                                <span className="font-medium text-gray-950">{hobby.title}</span>
+                                    <span className="font-medium text-gray-950">{hobby.title}</span>
 
-                                <span>{hobby.emoji}</span>
+                                    <span>{hobby.emoji}</span>
 
-                            </div>
+                                </div>
 
-                        ))}
+                            ))}
 
-                    </div>
+                        </div>
 
-                </Card>
+                    </Card>
+                    
 
-                <Card className="h-[320px] p-0">
-                    <Gmap />
-                </Card>
+                    <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
+                        <Gmap />
+                    </Card>
+
+                </div>
 
             </div>
 
