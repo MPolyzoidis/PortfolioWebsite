@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 z-0">
+    <div className="py-32 md:py-44 lg:py-48 z-0">
 
         <div className='container'>
 
