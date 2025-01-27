@@ -1,5 +1,4 @@
 //Reusable Component Imports
-import Background from "../components/Background"
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
 import CardHeader from "../components/CardHeader"
@@ -174,8 +173,6 @@ const AboutSection = () => {
     <div className="py-20 lg:py-28 relative z-0">
 
         <div className="container">
-
-            <Background />
 
             <SectionHeader 
                 eyebrow="About Me" 

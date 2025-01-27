@@ -1,3 +1,4 @@
+import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import AboutSection from "./sections/About";
 import ContactSection from "./sections/Contact";
@@ -8,7 +9,9 @@ import TestimonialsSection from "./sections/Testimonials";
 
 export default function Home() {
     return (
-        <div>
+        <div className="relative">
+            <Background />
+
             <Navbar />
             <HeroSection />
             <ProjectsSection />

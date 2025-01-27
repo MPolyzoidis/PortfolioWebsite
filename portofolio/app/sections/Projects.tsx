@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import placeholder from "../images/placeholder.png"
 import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
-import Background from "../components/Background"
 import SectionHeader from '../components/SectionHeader'
 import Card from '../components/Card'
 
@@ -48,9 +47,7 @@ const portofolioProjects = [
 
 const Projects = () => {
     return (
-        <section className="pb-20 lg:py-24 relative z-0">
-
-            <Background />
+        <section className="pb-20 lg:py-24 z-0">
 
             <div className="container">
 
