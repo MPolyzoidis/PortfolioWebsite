@@ -34,7 +34,7 @@ import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
 
-const toolboxItems = [
+const toolboxItems1 = [
     {
         title: "HTML",
         iconType: HTMLIcon 
@@ -63,6 +63,9 @@ const toolboxItems = [
         title: "Next.js",
         iconType: NextIcon 
     },
+]
+
+const toolboxItems2 = [
     {
         title: "Tailwind CSS",
         iconType: TailwindIcon 
@@ -91,6 +94,9 @@ const toolboxItems = [
         title: "MySQL",
         iconType: MySQLIcon 
     },
+]
+
+const toolboxItems3 = [
     {
         title: "PostgreSQL",
         iconType: PostgreSQLIcon 
@@ -120,6 +126,8 @@ const toolboxItems = [
         iconType: TrelloIcon 
     }
 ]
+
+const toolboxItems =[...toolboxItems1, ...toolboxItems2, ...toolboxItems3]
 
 const hobbies = [
     {
@@ -234,9 +242,9 @@ const AboutSection = () => {
                                 className=""
                             />
 
-                            <ToolboxRondo toolboxItems={toolboxItems} className=""/>
-                            <ToolboxRondo toolboxItems={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2"/>
-                            <ToolboxRondo toolboxItems={toolboxItems} className="mt-6 mb-6"/>
+                            <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+                            <ToolboxRondo toolboxItems={toolboxItems2} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right hover:[animation-play-state:paused]"/>
+                            <ToolboxRondo toolboxItems={toolboxItems3} className="mt-6 mb-6" itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
 
                         </Card>
 
