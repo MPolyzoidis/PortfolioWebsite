@@ -1,3 +1,5 @@
+"use client"
+
 //Reusable Component Imports
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
@@ -6,8 +8,12 @@ import ExpandableCard from "../components/ExpandableCard"
 import Gmap from "../components/GMap"
 import ToolboxRondo from "../components/ToolboxRondo"
 
-//Images Imports
+//Package Imports
 import Image from 'next/image'
+import { motion } from "framer-motion"
+import { useRef } from "react"
+
+//Images Imports
 import placeholder from "../images/placeholder.png"
 
 //Toolbox Icons Imports
@@ -177,115 +183,123 @@ const hobbies = [
 
 
 const AboutSection = () => {
-  return (
-    <div className="py-20 lg:py-28 relative z-0">
 
-        <div className="container">
+    // ref for dragConstraint(framer-motion)
+    const constraintRef = useRef(null);
 
-            <SectionHeader 
-                eyebrow="About Me" 
-                title="A Glimpse Into My World" 
-                description="Don't just take my word for it. See what clients have to say about my work"
-            />
+    return (
+        <div className="py-20 lg:py-28 relative z-0">
 
-            <div className="mt-20 flex flex-col gap-8">
+            <div className="container">
 
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+                <SectionHeader 
+                    eyebrow="About Me" 
+                    title="A Glimpse Into My World" 
+                    description="Don't just take my word for it. See what clients have to say about my work"
+                />
 
-                    <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1">
-                        <CardHeader 
-                            title="Lorem Ipsum" 
-                            description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-                        />
+                <div className="mt-20 flex flex-col gap-8">
 
-                        <div className="w-40 mx-auto mt-2 md:mt-0">
-                            <Image 
-                                src={placeholder} 
-                                alt="Placeholder" 
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+
+                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1">
+                            <CardHeader 
+                                title="Lorem Ipsum" 
+                                description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
                             />
+
+                            <div className="w-40 mx-auto mt-2 md:mt-0">
+                                <Image 
+                                    src={placeholder} 
+                                    alt="Placeholder" 
+                                />
+                            </div>
+        
+                        </Card>
+
+                        {/* This is a div that serves the purpose of displaying the ExpandableCard on small viewports and the Card on medium and large viewports through block and hidden */}
+                        <div className="md:col-span-3 lg:col-span-2">
+
+                            <ExpandableCard className="block md:hidden">
+
+                                <CardHeader 
+                                    title="My Toolbox" 
+                                    description="Explore the technologies I use to create exceptional digital experiences"
+                                />
+
+                                <div className="px-2">
+
+                                    {toolboxItems.map(item => (
+
+                                        <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+
+                                            <TechIcon component={item.iconType} />
+                                            <span className="font-semibold">{item.title}</span>
+
+                                        </div>
+
+                                    ))}
+
+                                </div>
+
+                            </ExpandableCard>
+
+                            <Card className="hidden md:block">
+
+                                <CardHeader 
+                                    title="My Toolbox" 
+                                    description="Explore the technologies I use to create exceptional digital experiences"
+                                    className=""
+                                />
+
+                                <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+                                <ToolboxRondo toolboxItems={toolboxItems2} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right hover:[animation-play-state:paused]"/>
+                                <ToolboxRondo toolboxItems={toolboxItems3} className="mt-6 mb-6" itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+
+                            </Card>
+
                         </div>
-    
-                    </Card>
 
-                    {/* This is a div that serves the purpose of displaying the ExpandableCard on small viewports and the Card on medium and large viewports through block and hidden */}
-                    <div className="md:col-span-3 lg:col-span-2">
+                    </div>
 
-                        <ExpandableCard className="block md:hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+
+                        <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
 
                             <CardHeader 
-                                title="My Toolbox" 
-                                description="Explore the technologies I use to create exceptional digital experiences"
+                                title="Beyond the Code" 
+                                description="Explore my interests and hobbies beyond the digital realm"
                             />
 
-                            <div className="px-2">
+                            <div className="relative flex-1" ref={constraintRef}>
 
-                                {toolboxItems.map(item => (
+                                {hobbies.map(hobby => (
 
-                                    <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+                                    <motion.div 
+                                        key={hobby.title} 
+                                        className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
+                                        style={{left: hobby.left, top: hobby.top}}
+                                        drag
+                                        dragConstraints={constraintRef}>
 
-                                        <TechIcon component={item.iconType} />
-                                        <span className="font-semibold">{item.title}</span>
+                                        <span className="font-medium text-gray-950">{hobby.title}</span>
 
-                                    </div>
+                                        <span>{hobby.emoji}</span>
+
+                                    </motion.div>
 
                                 ))}
 
                             </div>
 
-                        </ExpandableCard>
+                        </Card>
+                        
 
-                        <Card className="hidden md:block">
-
-                            <CardHeader 
-                                title="My Toolbox" 
-                                description="Explore the technologies I use to create exceptional digital experiences"
-                                className=""
-                            />
-
-                            <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
-                            <ToolboxRondo toolboxItems={toolboxItems2} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right hover:[animation-play-state:paused]"/>
-                            <ToolboxRondo toolboxItems={toolboxItems3} className="mt-6 mb-6" itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
-
+                        <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
+                            <Gmap />
                         </Card>
 
                     </div>
-
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
-
-                    <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-
-                        <CardHeader 
-                            title="Beyond the Code" 
-                            description="Explore my interests and hobbies beyond the digital realm"
-                        />
-
-                        <div className="relative flex-1">
-
-                            {hobbies.map(hobby => (
-
-                                <div 
-                                    key={hobby.title} 
-                                    className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
-                                    style={{left: hobby.left, top: hobby.top}}>
-
-                                    <span className="font-medium text-gray-950">{hobby.title}</span>
-
-                                    <span>{hobby.emoji}</span>
-
-                                </div>
-
-                            ))}
-
-                        </div>
-
-                    </Card>
-                    
-
-                    <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
-                        <Gmap />
-                    </Card>
 
                 </div>
 
@@ -293,9 +307,7 @@ const AboutSection = () => {
 
         </div>
 
-    </div>
-
-  )
+    )
 }
 
 export default AboutSection
