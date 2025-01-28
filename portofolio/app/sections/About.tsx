@@ -1,5 +1,3 @@
-"use client"
-
 //Reusable Component Imports
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
@@ -10,8 +8,6 @@ import ToolboxRondo from "../components/ToolboxRondo"
 
 //Package Imports
 import Image from 'next/image'
-import { motion } from "framer-motion"
-import { useRef } from "react"
 
 //Images Imports
 import placeholder from "../images/placeholder.png"
@@ -39,6 +35,7 @@ import UnityIcon from "../images/TechIcons/unity-icon.svg"
 import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
+import CardDraggableElements from "../components/CardDraggableElements"
 
 const toolboxItems1 = [
     {
@@ -183,10 +180,6 @@ const hobbies = [
 
 
 const AboutSection = () => {
-
-    // ref for dragConstraint(framer-motion)
-    const constraintRef = useRef(null);
-
     return (
         <div className="py-20 lg:py-28 relative z-0">
 
@@ -264,35 +257,7 @@ const AboutSection = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
 
-                        <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-
-                            <CardHeader 
-                                title="Beyond the Code" 
-                                description="Explore my interests and hobbies beyond the digital realm"
-                            />
-
-                            <div className="relative flex-1" ref={constraintRef}>
-
-                                {hobbies.map(hobby => (
-
-                                    <motion.div 
-                                        key={hobby.title} 
-                                        className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute" 
-                                        style={{left: hobby.left, top: hobby.top}}
-                                        drag
-                                        dragConstraints={constraintRef}>
-
-                                        <span className="font-medium text-gray-950">{hobby.title}</span>
-
-                                        <span>{hobby.emoji}</span>
-
-                                    </motion.div>
-
-                                ))}
-
-                            </div>
-
-                        </Card>
+                        <CardDraggableElements hobbies={hobbies} />
                         
 
                         <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
