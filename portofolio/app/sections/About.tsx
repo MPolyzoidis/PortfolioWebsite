@@ -1,3 +1,5 @@
+"use client"
+
 //Reusable Component Imports
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
@@ -8,6 +10,7 @@ import ToolboxRondo from "../components/ToolboxRondo"
 
 //Package Imports
 import Image from 'next/image'
+import { Element } from "react-scroll";
 
 //Images Imports
 import placeholder from "../images/placeholder.png"
@@ -181,6 +184,7 @@ const hobbies = [
 
 const AboutSection = () => {
     return (
+        <Element name="About">
         <div className="py-20 lg:py-28 relative z-0">
 
             <div className="container">
@@ -271,7 +275,7 @@ const AboutSection = () => {
             </div>
 
         </div>
-
+        </Element>                                
     )
 }
 

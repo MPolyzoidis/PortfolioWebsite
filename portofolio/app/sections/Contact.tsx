@@ -2,7 +2,6 @@ import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 
 const ContactSection = () => {
     return (
-
         <div className="py-16 pt-12 lg:py-24 lg:pt-20 relative">
 
             <div className="container">
