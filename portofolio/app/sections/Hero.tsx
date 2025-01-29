@@ -2,9 +2,28 @@
 import memojiImage from "../images/memoji.png"
 import ArrowDown from "../images/arrow-down-solid.svg"
 import Image from 'next/image'
-import { Element } from "react-scroll"
+import { Element, Link } from "react-scroll"
+import { useEffect, useState } from "react"
 
 const Hero = () => {
+
+    //Custom offset for Explore my work button for md and sm screens since it behaved differently that the others when scrolling to it
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1024) {
+                setOffset(-75);
+            } else {
+                setOffset(0);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <Element name="Home">
             <div className="py-32 md:py-44 lg:py-48 z-0">
@@ -36,15 +55,19 @@ const Hero = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-                            <span className="font-semibold">Explore My Work</span>
-                            <ArrowDown className="fill-white size-4"/>
-                        </button>
+                        <Link to="Projects" smooth={true} duration={1000} offset={offset}>
+                            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+                                <span className="font-semibold">Explore My Work</span>
+                                <ArrowDown className="fill-white size-4"/>
+                            </button>
+                        </Link>
 
-                        <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-800 px-6 h-12 rounded-xl">
-                            <span>👋</span>
-                            <span className="font-semibold">Contact Me</span>
-                        </button>
+                        <Link to="Contact" smooth={true} duration={2000} offset={-450}>
+                            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-800 px-6 h-12 rounded-xl">
+                                <span>👋</span>
+                                <span className="font-semibold">Contact Me</span>
+                            </button>
+                        </Link>
                     </div>   
 
                 </div>
