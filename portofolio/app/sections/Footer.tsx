@@ -37,6 +37,7 @@ const FooterSection = () => {
                             <a 
                             key={link.title} 
                             href={link.href}
+                            rel="noopener noreferrer"
                             target="_blank"
                             className="inline-flex items-center gap-1.5">
                                 <TechIcon component={link.icon} className="size-4" />

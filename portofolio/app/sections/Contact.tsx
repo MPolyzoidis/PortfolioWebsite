@@ -2,6 +2,8 @@
 import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 import { Element } from "react-scroll"
 
+const email = "polyzoidism" + "@gmail.com"
+
 const ContactSection = () => {
     return (
         <Element name="Contact">
@@ -24,11 +26,12 @@ const ContactSection = () => {
                             </div>
 
                             <div>
-
-                                <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                                    <span className="font-semibold">Contact Me</span>
-                                    <ArrowUpRight className="size-4 fill-white"/>
-                                </button>
+                                <a href={`https://mail.google.com/mail/?view=cm&to=${email}`} target="_blank" rel="noopener noreferrer">
+                                    <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+                                        <span className="font-semibold">Contact Me</span>
+                                        <ArrowUpRight className="size-4 fill-white"/>
+                                    </button>
+                                </a>
 
                             </div>
 
