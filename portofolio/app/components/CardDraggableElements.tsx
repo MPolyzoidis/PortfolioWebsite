@@ -1,10 +1,10 @@
 "use client"
-import { useRef } from 'react'
+import { FC, SVGProps, useRef } from 'react'
 import Card from './Card'
 import CardHeader from './CardHeader'
 import { motion } from "framer-motion"
 
-const CardDraggableElements = ( { hobbies } : {hobbies : { title: string; emoji: string; left: string; top: string; } [] } ) => {
+const CardDraggableElements = ( { hobbies, CardHeaderIcon } : {hobbies : { title: string; emoji: string; left: string; top: string; } []; CardHeaderIcon?: FC<SVGProps<SVGElement>>; } ) => {
 
     const constraintRef = useRef(null);
     
@@ -14,6 +14,7 @@ const CardDraggableElements = ( { hobbies } : {hobbies : { title: string; emoji:
             <CardHeader 
                 title="Beyond the Code" 
                 description="Explore my interests and hobbies beyond the digital realm"
+                Icon={CardHeaderIcon}
             />
 
             <div className="relative flex-1" ref={constraintRef}>

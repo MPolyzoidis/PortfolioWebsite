@@ -41,6 +41,12 @@ import TechIcon from "../components/TechIcon"
 import CardDraggableElements from "../components/CardDraggableElements"
 import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 
+//Other Icons Imports
+import FileIcon from "../images/file-Icon.svg"
+import BasketIcon from "../images/basketIcon.svg"
+import ToolboxIcon from "../images/toolboxIcon.svg"
+
+
 const toolboxItems1 = [
     {
         title: "HTML",
@@ -200,11 +206,11 @@ const AboutSection = () => {
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
-                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1 flex flex-col justify-center items-center gap-2">
+                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1 flex flex-col justify-between">
                             <CardHeader 
-                                title="Lorem Ipsum" 
+                                title="My CV" 
                                 description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-                                className=""
+                                Icon= {FileIcon}
                             />
 
                             <div className="w-40 mx-auto mt-0">
@@ -214,8 +220,8 @@ const AboutSection = () => {
                                 />
                             </div>
 
-                            <div className="mb-4">
-                                <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+                            <div className="mb-4 mx-auto w-max">
+                                <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-10 rounded-xl gap-2 w-max border border-gray-900">
                                     <span className="font-semibold">Contact Me</span>
                                     <ArrowUpRight className="size-4 fill-gray-900"/>
                                 </button>
@@ -231,6 +237,7 @@ const AboutSection = () => {
                                 <CardHeader 
                                     title="My Toolbox" 
                                     description="Explore the technologies I use to create exceptional digital experiences"
+                                    Icon= {ToolboxIcon}
                                 />
 
                                 <div className="px-2">
@@ -255,7 +262,7 @@ const AboutSection = () => {
                                 <CardHeader 
                                     title="My Toolbox" 
                                     description="Explore the technologies I use to create exceptional digital experiences"
-                                    className=""
+                                    Icon= {ToolboxIcon}
                                 />
 
                                 <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
@@ -270,7 +277,7 @@ const AboutSection = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
 
-                        <CardDraggableElements hobbies={hobbies} />
+                        <CardDraggableElements hobbies={hobbies} CardHeaderIcon={BasketIcon}/>
                         
 
                         <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
