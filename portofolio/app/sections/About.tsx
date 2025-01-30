@@ -39,6 +39,7 @@ import ViteIcon from "../images/TechIcons/vite-icon.svg"
 import NextIcon from "../images/TechIcons/next-icon.svg"
 import TechIcon from "../components/TechIcon"
 import CardDraggableElements from "../components/CardDraggableElements"
+import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 
 const toolboxItems1 = [
     {
@@ -199,17 +200,25 @@ const AboutSection = () => {
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
-                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1">
+                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1 flex flex-col justify-center items-center gap-2">
                             <CardHeader 
                                 title="Lorem Ipsum" 
                                 description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+                                className=""
                             />
 
-                            <div className="w-40 mx-auto mt-2 md:mt-0">
+                            <div className="w-40 mx-auto mt-0">
                                 <Image 
                                     src={placeholder} 
                                     alt="Placeholder" 
                                 />
+                            </div>
+
+                            <div className="mb-4">
+                                <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+                                    <span className="font-semibold">Contact Me</span>
+                                    <ArrowUpRight className="size-4 fill-gray-900"/>
+                                </button>
                             </div>
         
                         </Card>
