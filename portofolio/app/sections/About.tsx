@@ -144,15 +144,15 @@ const toolboxItems =[...toolboxItems1, ...toolboxItems2, ...toolboxItems3]
 
 const hobbies = [
     {
-        title:"Ipsum1",
+        title:"Football",
         emoji:"⚽",
         left: "5%",
         top: "5%",
 
     },
     {
-        title:"Ipsum2",
-        emoji:"⚽",
+        title:"Basketball",
+        emoji:"🏀",
         left: "50%",
         top: "5%",
     },
