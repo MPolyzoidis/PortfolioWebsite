@@ -1,20 +1,25 @@
 import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
+import TechIcon from "../components/TechIcon"
+import GithubIcon from "../images/TechIcons/github-icon.svg"
+import LinkedInIcon from "../images/TechIcons/linkedin-Icon.svg"
 
 const footerLinks = [
     {
+        icon: LinkedInIcon,
         title:"LinkedIn",
-        href:"#",
+        href:"https://www.linkedin.com/in/marios-polyzoidis-b2ab88317/",
     },
     {
+        icon: GithubIcon,
         title:"Github",
-        href:"#",
+        href:"https://github.com/MPolyzoidis",
     }
 ]
 
 const FooterSection = () => {
     return (
 
-        <footer className="relative -z-10 overflow-x-clip">
+        <footer className="relative overflow-x-clip">
 
             <div 
                 className="absolute h-[400px] w-[1600px] lg:w-[2600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10">
@@ -32,7 +37,9 @@ const FooterSection = () => {
                             <a 
                             key={link.title} 
                             href={link.href}
+                            target="_blank"
                             className="inline-flex items-center gap-1.5">
+                                <TechIcon component={link.icon} className="size-4" />
                                 <span className="font-semibold">{link.title}</span>
                                 <ArrowUpRight className="size-3 fill-white"/>
                             </a>
