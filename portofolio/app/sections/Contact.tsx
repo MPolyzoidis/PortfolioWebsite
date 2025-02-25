@@ -27,12 +27,11 @@ const ContactSection = () => {
 
                             <div>
                                 <a href={`https://mail.google.com/mail/?view=cm&to=${email}`} target="_blank" rel="noopener noreferrer">
-                                    <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+                                    <button className="group text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-white hover:text-gray-900 hover:border-white transition duration-300">
                                         <span className="font-semibold">Contact Me</span>
-                                        <ArrowUpRight className="size-4 fill-white"/>
+                                        <ArrowUpRight className="size-4 fill-white transition duration-300 group-hover:fill-gray-900"/>
                                     </button>
                                 </a>
-
                             </div>
 
                         </div>

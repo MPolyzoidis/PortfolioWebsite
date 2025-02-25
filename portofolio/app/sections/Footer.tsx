@@ -39,7 +39,7 @@ const FooterSection = () => {
                             href={link.href}
                             rel="noopener noreferrer"
                             target="_blank"
-                            className="inline-flex items-center gap-1.5">
+                            className="inline-flex items-center gap-1.5 px-4 xs:px-2 py-1.5 rounded-2xl hover:bg-white/10">
                                 <TechIcon component={link.icon} className="size-4" />
                                 <span className="font-semibold">{link.title}</span>
                                 <ArrowUpRight className="size-3 fill-white"/>

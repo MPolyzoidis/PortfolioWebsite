@@ -221,9 +221,9 @@ const AboutSection = () => {
                                 </div>
 
                                 <div className="mb-4 mx-auto w-max">
-                                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-10 rounded-xl gap-2 w-max border border-gray-900">
+                                    <button className="group bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-10 rounded-xl gap-2 w-max border border-gray-900 hover:bg-gradient-to-r hover:from-emerald-300/80 hover:to-sky-400/80 hover:text-white transition duration-300">
                                         <span className="font-semibold">Contact Me</span>
-                                        <ArrowUpRight className="size-4 fill-gray-900"/>
+                                        <ArrowUpRight className="size-4 fill-gray-900 group-hover:fill-white transition duration-300"/>
                                     </button>
                                 </div>
             

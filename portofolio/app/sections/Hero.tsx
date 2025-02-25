@@ -56,14 +56,14 @@ const Hero = () => {
 
                     <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
                         <Link to="Projects" smooth={true} duration={1000} offset={offset}>
-                            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+                            <button className="group inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white hover:text-gray-900 hover:border-white transition duration-300">
                                 <span className="font-semibold">Explore My Work</span>
-                                <ArrowDown className="fill-white size-4"/>
+                                <ArrowDown className="fill-white size-4 transition duration-300 group-hover:fill-gray-900"/>
                             </button>
                         </Link>
 
                         <Link to="Contact" smooth={true} duration={2000} offset={-450}>
-                            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-800 px-6 h-12 rounded-xl">
+                            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white hover:text-gray-900 hover:border-white transition duration-300">
                                 <span>👋</span>
                                 <span className="font-semibold">Contact Me</span>
                             </button>
