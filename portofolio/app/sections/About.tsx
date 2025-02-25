@@ -192,105 +192,105 @@ const hobbies = [
 const AboutSection = () => {
     return (
         <Element name="About">
-        <div className="py-20 lg:py-28 relative z-0">
+            <div className="py-20 lg:py-28 relative z-0">
 
-            <div className="container">
+                <div className="container">
 
-                <SectionHeader 
-                    eyebrow="About Me" 
-                    title="A Glimpse Into My World" 
-                    description="Don't just take my word for it. See what clients have to say about my work"
-                />
+                    <SectionHeader 
+                        eyebrow="About Me" 
+                        title="A Glimpse Into My World" 
+                        description="Don't just take my word for it. See what clients have to say about my work"
+                    />
 
-                <div className="mt-20 flex flex-col gap-8">
+                    <div className="mt-20 flex flex-col gap-8">
 
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
-                        <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1 flex flex-col justify-between">
-                            <CardHeader 
-                                title="My CV" 
-                                description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-                                Icon= {FileIcon}
-                            />
-
-                            <div className="w-40 mx-auto mt-0">
-                                <Image 
-                                    src={placeholder} 
-                                    alt="Placeholder" 
-                                />
-                            </div>
-
-                            <div className="mb-4 mx-auto w-max">
-                                <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-10 rounded-xl gap-2 w-max border border-gray-900">
-                                    <span className="font-semibold">Contact Me</span>
-                                    <ArrowUpRight className="size-4 fill-gray-900"/>
-                                </button>
-                            </div>
-        
-                        </Card>
-
-                        {/* This is a div that serves the purpose of displaying the ExpandableCard on small viewports and the Card on medium and large viewports through block and hidden */}
-                        <div className="md:col-span-3 lg:col-span-2">
-
-                            <ExpandableCard className="block md:hidden">
-
+                            <Card className="h-[320px] md:h-[400px] lg:h-[384px] md:col-span-2 lg:col-span-1 flex flex-col justify-between">
                                 <CardHeader 
-                                    title="My Toolbox" 
-                                    description="Explore the technologies I use to create exceptional digital experiences"
-                                    Icon= {ToolboxIcon}
+                                    title="My CV" 
+                                    description="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+                                    Icon= {FileIcon}
                                 />
 
-                                <div className="px-2">
-
-                                    {toolboxItems.map(item => (
-
-                                        <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
-
-                                            <TechIcon component={item.iconType} />
-                                            <span className="font-semibold">{item.title}</span>
-
-                                        </div>
-
-                                    ))}
-
+                                <div className="w-40 mx-auto mt-0">
+                                    <Image 
+                                        src={placeholder} 
+                                        alt="Placeholder" 
+                                    />
                                 </div>
 
-                            </ExpandableCard>
+                                <div className="mb-4 mx-auto w-max">
+                                    <button className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center px-6 h-10 rounded-xl gap-2 w-max border border-gray-900">
+                                        <span className="font-semibold">Contact Me</span>
+                                        <ArrowUpRight className="size-4 fill-gray-900"/>
+                                    </button>
+                                </div>
+            
+                            </Card>
 
-                            <Card className="hidden md:block">
+                            {/* This is a div that serves the purpose of displaying the ExpandableCard on small viewports and the Card on medium and large viewports through block and hidden */}
+                            <div className="md:col-span-3 lg:col-span-2">
 
-                                <CardHeader 
-                                    title="My Toolbox" 
-                                    description="Explore the technologies I use to create exceptional digital experiences"
-                                    Icon= {ToolboxIcon}
-                                />
+                                <ExpandableCard className="block md:hidden">
 
-                                <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
-                                <ToolboxRondo toolboxItems={toolboxItems2} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right hover:[animation-play-state:paused]"/>
-                                <ToolboxRondo toolboxItems={toolboxItems3} className="mt-6 mb-6" itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+                                    <CardHeader 
+                                        title="My Toolbox" 
+                                        description="Explore the technologies I use to create exceptional digital experiences"
+                                        Icon= {ToolboxIcon}
+                                    />
 
+                                    <div className="px-2">
+
+                                        {toolboxItems.map(item => (
+
+                                            <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 m-1.5 outline outline-2 outline-white/10 rounded-lg">
+
+                                                <TechIcon component={item.iconType} />
+                                                <span className="font-semibold">{item.title}</span>
+
+                                            </div>
+
+                                        ))}
+
+                                    </div>
+
+                                </ExpandableCard>
+
+                                <Card className="hidden md:block">
+
+                                    <CardHeader 
+                                        title="My Toolbox" 
+                                        description="Explore the technologies I use to create exceptional digital experiences"
+                                        Icon= {ToolboxIcon}
+                                    />
+
+                                    <ToolboxRondo toolboxItems={toolboxItems1} itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+                                    <ToolboxRondo toolboxItems={toolboxItems2} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right hover:[animation-play-state:paused]"/>
+                                    <ToolboxRondo toolboxItems={toolboxItems3} className="mt-6 mb-6" itemsWrapperClassName="animate-move-left hover:[animation-play-state:paused]"/>
+
+                                </Card>
+
+                            </div>
+
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+
+                            <CardDraggableElements hobbies={hobbies} CardHeaderIcon={BasketIcon}/>
+                            
+
+                            <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
+                                <Gmap />
                             </Card>
 
                         </div>
 
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
-
-                        <CardDraggableElements hobbies={hobbies} CardHeaderIcon={BasketIcon}/>
-                        
-
-                        <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
-                            <Gmap />
-                        </Card>
-
-                    </div>
-
                 </div>
 
             </div>
-
-        </div>
         </Element>                                
     )
 }

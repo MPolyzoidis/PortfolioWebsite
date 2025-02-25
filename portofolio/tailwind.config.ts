@@ -12,9 +12,10 @@ export default {
     theme: {
 
         screens: {
-        sm: "375px",
-        md: "768px",
-        lg: "1200px",
+            xs: "300px",
+            sm: "375px",
+            md: "768px",
+            lg: "1200px",
         },
 
         container: {
