@@ -20,7 +20,7 @@ const ContactSection = () => {
                                 <h2 className="font-serif text-2xl md:text-3xl">Lorem Ipsum Lorem Ipsum</h2>
 
                                 <p className="text-sm md:text-base mt-2">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.
                                 </p>
 
                             </div>
