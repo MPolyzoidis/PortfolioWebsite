@@ -3,12 +3,18 @@ import { FC, SVGProps, useRef } from "react"
 import Card from "./Card"
 import CardHeader from "./CardHeader"
 import { motion } from "framer-motion"
+import TechIcon from "./TechIcon"
 
 const CardDraggableElements = ({
-    hobbies,
+    currentTools,
     CardHeaderIcon,
 }: {
-    hobbies: { title: string; emoji: string; left: string; top: string }[]
+    currentTools: {
+        title: string
+        iconType: React.ElementType
+        left: string
+        top: string
+    }[]
     CardHeaderIcon?: FC<SVGProps<SVGElement>>
 }) => {
     const constraintRef = useRef(null)
@@ -16,25 +22,25 @@ const CardDraggableElements = ({
     return (
         <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
-                title="Beyond the Code"
-                description="Explore my interests and hobbies beyond the digital realm"
+                title="My Current Toolbelt"
+                description="Tools I currently use daily"
                 Icon={CardHeaderIcon}
             />
 
             <div className="relative flex-1" ref={constraintRef}>
-                {hobbies.map((hobby) => (
+                {currentTools.map((currentTool) => (
                     <motion.div
-                        key={hobby.title}
-                        className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute"
-                        style={{ left: hobby.left, top: hobby.top }}
+                        key={currentTool.title}
+                        className="inline-flex items-center justify-center gap-2 px-6 py-1.5 outline outline-2 outline-white/10 bg-neutral-900 rounded-full absolute"
+                        style={{ left: currentTool.left, top: currentTool.top }}
                         drag
                         dragConstraints={constraintRef}
                     >
-                        <span className="font-medium text-gray-950">
-                            {hobby.title}
+                        <span className="font-semibold">
+                            {currentTool.title}
                         </span>
 
-                        <span>{hobby.emoji}</span>
+                        <TechIcon component={currentTool.iconType} />
                     </motion.div>
                 ))}
             </div>

@@ -8,7 +8,7 @@ const Employment = () => {
             <section className="pb-20 lg:py-24 z-0">
                 <div className="container">
                     <SectionHeader
-                        eyebrow="Lorem Ipsum"
+                        eyebrow="Professional Experience"
                         title="Where I've Been Employed"
                     />
 
@@ -23,11 +23,11 @@ const Employment = () => {
                                 </div>
                                 <div className="flex flex-row">
                                     <div className="font-light text-md text-gray-400">
-                                        May 2025 - Now / Thessaloniki, Greece
+                                        March 2025 - Now / Thessaloniki, Greece
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-full md:w-1/2 text-lg text-gray300 text-left md:text-justify">
+                            <div className="w-full md:w-1/2 text-lg text-gray-300 text-left md:text-justify">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
                                 the industry&apos;s standard dummy text ever

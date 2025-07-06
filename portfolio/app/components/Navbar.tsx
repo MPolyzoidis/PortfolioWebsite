@@ -5,20 +5,23 @@ import { useEffect, useState } from "react"
 const navTitles = [
     { title: "Home" },
     { title: "Employment" },
-    { title: "Testimonials" },
     { title: "About" },
+    { title: "Contact" },
 ]
 
 const Navbar = () => {
     //Custom offset for the project page for md and sm screens since it behaved differently that the others when scrolling to it through the navbar
     const [offset, setOffset] = useState(0)
+    const [animationDuration, setAnimationDuration] = useState(500)
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 1024) {
                 setOffset(-80)
+                setAnimationDuration(1000)
             } else {
                 setOffset(0)
+                setAnimationDuration(500)
             }
         }
 
@@ -35,7 +38,7 @@ const Navbar = () => {
                         key={navTitle.title}
                         to={navTitle.title}
                         smooth={true}
-                        duration={500}
+                        duration={animationDuration}
                         spy={true}
                         offset={navTitle.title === "Employment" ? offset : 0}
                         className="nav-item"
