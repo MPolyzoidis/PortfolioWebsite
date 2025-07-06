@@ -4,8 +4,8 @@ import AboutSection from "./sections/About"
 import ContactSection from "./sections/Contact"
 import FooterSection from "./sections/Footer"
 import HeroSection from "./sections/Hero"
-import ProjectsSection from "./sections/Projects"
-import TestimonialsSection from "./sections/Testimonials"
+import EmploymentSection from "./sections/Employment"
+// import TestimonialsSection from "./sections/Testimonials"
 
 export default function Home() {
     return (
@@ -14,8 +14,8 @@ export default function Home() {
 
             <Navbar />
             <HeroSection />
-            <ProjectsSection />
-            <TestimonialsSection />
+            <EmploymentSection />
+            {/* <TestimonialsSection /> */}
             <AboutSection />
             <ContactSection />
             <FooterSection />

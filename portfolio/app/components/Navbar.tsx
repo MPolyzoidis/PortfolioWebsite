@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const navTitles = [
     { title: "Home" },
-    { title: "Projects" },
+    { title: "Employment" },
     { title: "Testimonials" },
     { title: "About" },
 ]
@@ -37,7 +37,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         spy={true}
-                        offset={navTitle.title === "Projects" ? offset : 0}
+                        offset={navTitle.title === "Employment" ? offset : 0}
                         className="nav-item"
                     >
                         <button>{navTitle.title}</button>

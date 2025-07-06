@@ -35,11 +35,11 @@ const Hero = () => {
                         />
 
                         <div className="bg-gray-950 border border-gray-800 rounded-lg px-4 py-1.5 inline-flex items-center gap-4">
-                            <div className="bg-green-500 size-2.5 rounded-full relative">
-                                <div className="bg-green-500 size-2.5 rounded-full absolute inset-0 animate-ping-large" />
+                            <div className="bg-red-500 size-2.5 rounded-full relative">
+                                <div className="bg-red-500 size-2.5 rounded-full absolute inset-0 animate-ping-large" />
                             </div>
                             <div className="text-sm font-medium">
-                                Available for work
+                                Working at Deloitte
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const Hero = () => {
 
                     <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
                         <Link
-                            to="Projects"
+                            to="Employment"
                             smooth={true}
                             duration={1000}
                             offset={offset}

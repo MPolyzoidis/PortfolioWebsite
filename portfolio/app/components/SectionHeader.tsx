@@ -5,7 +5,7 @@ const SectionHeader = ({
 }: {
     title: string
     eyebrow: string
-    description: string
+    description?: string
 }) => {
     return (
         <>
