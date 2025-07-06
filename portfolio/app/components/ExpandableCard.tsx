@@ -1,18 +1,18 @@
-"use client";
-import { twMerge } from "tailwind-merge";
-import { PropsWithChildren, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import ArrowDown from "../images/arrow-down-solid.svg";
-import React from "react";
+"use client"
+import { twMerge } from "tailwind-merge"
+import { PropsWithChildren, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import ArrowDown from "../images/arrow-down-solid.svg"
+import React from "react"
 
 const ExpandableCard = ({
     className,
     children,
 }: PropsWithChildren<{ className?: string }>) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const childrenArray = React.Children.toArray(children);
-    const header = childrenArray[0]; // Assuming that the first child is the header
-    const restOfChildren = childrenArray.slice(1);
+    const [isOpen, setIsOpen] = useState(false)
+    const childrenArray = React.Children.toArray(children)
+    const header = childrenArray[0] // Assuming that the first child is the header
+    const restOfChildren = childrenArray.slice(1)
 
     return (
         <motion.div
@@ -54,7 +54,7 @@ const ExpandableCard = ({
                 </motion.div>
             </div>
         </motion.div>
-    );
-};
+    )
+}
 
-export default ExpandableCard;
+export default ExpandableCard

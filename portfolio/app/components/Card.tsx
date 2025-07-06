@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
-import { PropsWithChildren } from "react";
+import { twMerge } from "tailwind-merge"
+import { PropsWithChildren } from "react"
 
 const Card = ({
     className,
@@ -14,7 +14,7 @@ const Card = ({
         >
             {children}
         </div>
-    );
-};
+    )
+}
 
-export default Card;
+export default Card

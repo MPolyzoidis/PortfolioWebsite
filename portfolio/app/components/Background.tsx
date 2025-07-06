@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+"use client"
+import { motion } from "framer-motion"
 
 const Background = () => {
     return (
@@ -8,7 +8,7 @@ const Background = () => {
             layout
             transition={{ duration: 0.75, ease: "easeInOut" }}
         ></motion.div>
-    );
-};
+    )
+}
 
-export default Background;
+export default Background

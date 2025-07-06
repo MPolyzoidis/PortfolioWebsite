@@ -1,17 +1,17 @@
-"use client";
-import { FC, SVGProps, useRef } from "react";
-import Card from "./Card";
-import CardHeader from "./CardHeader";
-import { motion } from "framer-motion";
+"use client"
+import { FC, SVGProps, useRef } from "react"
+import Card from "./Card"
+import CardHeader from "./CardHeader"
+import { motion } from "framer-motion"
 
 const CardDraggableElements = ({
     hobbies,
     CardHeaderIcon,
 }: {
-    hobbies: { title: string; emoji: string; left: string; top: string }[];
-    CardHeaderIcon?: FC<SVGProps<SVGElement>>;
+    hobbies: { title: string; emoji: string; left: string; top: string }[]
+    CardHeaderIcon?: FC<SVGProps<SVGElement>>
 }) => {
-    const constraintRef = useRef(null);
+    const constraintRef = useRef(null)
 
     return (
         <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
@@ -39,7 +39,7 @@ const CardDraggableElements = ({
                 ))}
             </div>
         </Card>
-    );
-};
+    )
+}
 
-export default CardDraggableElements;
+export default CardDraggableElements

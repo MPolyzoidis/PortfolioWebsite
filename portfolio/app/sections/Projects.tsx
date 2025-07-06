@@ -1,10 +1,10 @@
-"use client";
-import { Element } from "react-scroll";
-import Image from "next/image";
-import placeholder from "../images/placeholder.png";
-import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg";
-import SectionHeader from "../components/SectionHeader";
-import Card from "../components/Card";
+"use client"
+import { Element } from "react-scroll"
+import Image from "next/image"
+import placeholder from "../images/placeholder.png"
+import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
+import SectionHeader from "../components/SectionHeader"
+import Card from "../components/Card"
 
 const portofolioProjects = [
     {
@@ -43,7 +43,7 @@ const portofolioProjects = [
         link: "https://www.lipsum.com/",
         image: placeholder,
     },
-];
+]
 
 const Projects = () => {
     return (
@@ -121,7 +121,7 @@ const Projects = () => {
                 </div>
             </section>
         </Element>
-    );
-};
+    )
+}
 
-export default Projects;
+export default Projects

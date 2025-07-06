@@ -1,50 +1,50 @@
-"use client";
+"use client"
 
 //Reusable Component Imports
-import Card from "../components/Card";
-import SectionHeader from "../components/SectionHeader";
-import CardHeader from "../components/CardHeader";
-import ExpandableCard from "../components/ExpandableCard";
-import Gmap from "../components/GMap";
-import ToolboxRondo from "../components/ToolboxRondo";
+import Card from "../components/Card"
+import SectionHeader from "../components/SectionHeader"
+import CardHeader from "../components/CardHeader"
+import ExpandableCard from "../components/ExpandableCard"
+import ToolboxRondo from "../components/ToolboxRondo"
+import Map from "../components/Map"
 
 //Package Imports
-import Image from "next/image";
-import { Element } from "react-scroll";
+import Image from "next/image"
+import { Element } from "react-scroll"
 
 //Images Imports
-import placeholder from "../images/placeholder.png";
+import placeholder from "../images/placeholder.png"
 
 //Toolbox Icons Imports
-import CSSIcon from "../images/TechIcons/css3-icon.svg";
-import DockerIcon from "../images/TechIcons/docker-icon.svg";
-import FigmaIcon from "../images/TechIcons/figma-icon.svg";
-import FlutterIcon from "../images/TechIcons/flutter-icon.svg";
-import GitHubIcon from "../images/TechIcons/github-icon.svg";
-import GitLabIcon from "../images/TechIcons/gitlab-icon.svg";
-import HTMLIcon from "../images/TechIcons/html5-icon.svg";
-import JavaIcon from "../images/TechIcons/java-icon.svg";
-import CSharpIcon from "../images/TechIcons/c-sharp-icon.svg";
-import JavaScriptIcon from "../images/TechIcons/js-icon.svg";
-import TypeScriptIcon from "../images/TechIcons/ts-icon.svg";
-import MySQLIcon from "../images/TechIcons/mysql-icon.svg";
-import PostgreSQLIcon from "../images/TechIcons/postgresql-icon.svg";
-import NodeIcon from "../images/TechIcons/node-icon.svg";
-import ExpressIcon from "../images/TechIcons/express-icon.svg";
-import ReactIcon from "../images/TechIcons/react-icon.svg";
-import TailwindIcon from "../images/TechIcons/tailwind-icon.svg";
-import TrelloIcon from "../images/TechIcons/trello-icon.svg";
-import UnityIcon from "../images/TechIcons/unity-icon.svg";
-import ViteIcon from "../images/TechIcons/vite-icon.svg";
-import NextIcon from "../images/TechIcons/next-icon.svg";
-import TechIcon from "../components/TechIcon";
-import CardDraggableElements from "../components/CardDraggableElements";
-import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg";
+import CSSIcon from "../images/TechIcons/css3-icon.svg"
+import DockerIcon from "../images/TechIcons/docker-icon.svg"
+import FigmaIcon from "../images/TechIcons/figma-icon.svg"
+import FlutterIcon from "../images/TechIcons/flutter-icon.svg"
+import GitHubIcon from "../images/TechIcons/github-icon.svg"
+import GitLabIcon from "../images/TechIcons/gitlab-icon.svg"
+import HTMLIcon from "../images/TechIcons/html5-icon.svg"
+import JavaIcon from "../images/TechIcons/java-icon.svg"
+import CSharpIcon from "../images/TechIcons/c-sharp-icon.svg"
+import JavaScriptIcon from "../images/TechIcons/js-icon.svg"
+import TypeScriptIcon from "../images/TechIcons/ts-icon.svg"
+import MySQLIcon from "../images/TechIcons/mysql-icon.svg"
+import PostgreSQLIcon from "../images/TechIcons/postgresql-icon.svg"
+import NodeIcon from "../images/TechIcons/node-icon.svg"
+import ExpressIcon from "../images/TechIcons/express-icon.svg"
+import ReactIcon from "../images/TechIcons/react-icon.svg"
+import TailwindIcon from "../images/TechIcons/tailwind-icon.svg"
+import TrelloIcon from "../images/TechIcons/trello-icon.svg"
+import UnityIcon from "../images/TechIcons/unity-icon.svg"
+import ViteIcon from "../images/TechIcons/vite-icon.svg"
+import NextIcon from "../images/TechIcons/next-icon.svg"
+import TechIcon from "../components/TechIcon"
+import CardDraggableElements from "../components/CardDraggableElements"
+import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
 
 //Other Icons Imports
-import FileIcon from "../images/file-Icon.svg";
-import BasketIcon from "../images/basketIcon.svg";
-import ToolboxIcon from "../images/toolboxIcon.svg";
+import FileIcon from "../images/file-Icon.svg"
+import BasketIcon from "../images/basketIcon.svg"
+import ToolboxIcon from "../images/toolboxIcon.svg"
 
 const toolboxItems1 = [
     {
@@ -75,7 +75,7 @@ const toolboxItems1 = [
         title: "Next.js",
         iconType: NextIcon,
     },
-];
+]
 
 const toolboxItems2 = [
     {
@@ -106,7 +106,7 @@ const toolboxItems2 = [
         title: "MySQL",
         iconType: MySQLIcon,
     },
-];
+]
 
 const toolboxItems3 = [
     {
@@ -137,9 +137,9 @@ const toolboxItems3 = [
         title: "Trello",
         iconType: TrelloIcon,
     },
-];
+]
 
-const toolboxItems = [...toolboxItems1, ...toolboxItems2, ...toolboxItems3];
+const toolboxItems = [...toolboxItems1, ...toolboxItems2, ...toolboxItems3]
 
 const hobbies = [
     {
@@ -184,7 +184,7 @@ const hobbies = [
         left: "45%",
         top: "70%",
     },
-];
+]
 
 const AboutSection = () => {
     return (
@@ -281,14 +281,14 @@ const AboutSection = () => {
                             />
 
                             <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
-                                <Gmap />
+                                <Map />
                             </Card>
                         </div>
                     </div>
                 </div>
             </div>
         </Element>
-    );
-};
+    )
+}
 
-export default AboutSection;
+export default AboutSection

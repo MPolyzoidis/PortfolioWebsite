@@ -3,9 +3,9 @@ const SectionHeader = ({
     eyebrow,
     description,
 }: {
-    title: string;
-    eyebrow: string;
-    description: string;
+    title: string
+    eyebrow: string
+    description: string
 }) => {
     return (
         <>
@@ -23,7 +23,7 @@ const SectionHeader = ({
                 {description}
             </p>
         </>
-    );
-};
+    )
+}
 
-export default SectionHeader;
+export default SectionHeader

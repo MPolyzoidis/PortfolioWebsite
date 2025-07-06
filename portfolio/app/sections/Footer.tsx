@@ -1,7 +1,7 @@
-import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg";
-import TechIcon from "../components/TechIcon";
-import GithubIcon from "../images/TechIcons/github-icon.svg";
-import LinkedInIcon from "../images/TechIcons/linkedin-Icon.svg";
+import ArrowUpRight from "../images/arrow-up-right-from-square-solid.svg"
+import TechIcon from "../components/TechIcon"
+import GithubIcon from "../images/TechIcons/github-icon.svg"
+import LinkedInIcon from "../images/TechIcons/linkedin-Icon.svg"
 
 const footerLinks = [
     {
@@ -14,7 +14,7 @@ const footerLinks = [
         title: "Github",
         href: "https://github.com/MPolyzoidis",
     },
-];
+]
 
 const FooterSection = () => {
     return (
@@ -50,7 +50,7 @@ const FooterSection = () => {
                 </div>
             </div>
         </footer>
-    );
-};
+    )
+}
 
-export default FooterSection;
+export default FooterSection

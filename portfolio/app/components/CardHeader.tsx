@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
-import { FC, SVGProps } from "react";
+import { twMerge } from "tailwind-merge"
+import { FC, SVGProps } from "react"
 
 const CardHeader = ({
     title,
@@ -7,10 +7,10 @@ const CardHeader = ({
     className,
     Icon,
 }: {
-    title: string;
-    description: string;
-    className?: string;
-    Icon?: FC<SVGProps<SVGElement>>;
+    title: string
+    description: string
+    className?: string
+    Icon?: FC<SVGProps<SVGElement>>
 }) => {
     return (
         <div
@@ -25,7 +25,7 @@ const CardHeader = ({
                 {description}
             </p>
         </div>
-    );
-};
+    )
+}
 
-export default CardHeader;
+export default CardHeader

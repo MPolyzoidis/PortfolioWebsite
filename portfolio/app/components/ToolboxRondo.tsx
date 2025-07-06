@@ -1,15 +1,15 @@
-import { twMerge } from "tailwind-merge";
-import TechIcon from "./TechIcon";
-import { Fragment } from "react";
+import { twMerge } from "tailwind-merge"
+import TechIcon from "./TechIcon"
+import { Fragment } from "react"
 
 const ToolboxRondo = ({
     toolboxItems,
     className,
     itemsWrapperClassName,
 }: {
-    toolboxItems: { title: string; iconType: React.ElementType }[];
-    className?: string;
-    itemsWrapperClassName?: string;
+    toolboxItems: { title: string; iconType: React.ElementType }[]
+    className?: string
+    itemsWrapperClassName?: string
 }) => {
     return (
         <div
@@ -44,7 +44,7 @@ const ToolboxRondo = ({
                 ]}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default ToolboxRondo;
+export default ToolboxRondo

@@ -1,31 +1,31 @@
-"use client";
-import { Link } from "react-scroll";
-import { useEffect, useState } from "react";
+"use client"
+import { Link } from "react-scroll"
+import { useEffect, useState } from "react"
 
 const navTitles = [
     { title: "Home" },
     { title: "Projects" },
     { title: "Testimonials" },
     { title: "About" },
-];
+]
 
 const Navbar = () => {
     //Custom offset for the project page for md and sm screens since it behaved differently that the others when scrolling to it through the navbar
-    const [offset, setOffset] = useState(0);
+    const [offset, setOffset] = useState(0)
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 1024) {
-                setOffset(-80);
+                setOffset(-80)
             } else {
-                setOffset(0);
+                setOffset(0)
             }
-        };
+        }
 
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+        handleResize()
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
 
     return (
         <div className="flex justify-center items-center fixed w-full top-3 z-50">
@@ -45,7 +45,7 @@ const Navbar = () => {
                 ))}
             </nav>
         </div>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar

@@ -1,11 +1,11 @@
-"use client";
-import Background from "../components/Background";
-import SectionHeader from "../components/SectionHeader";
-import avatar from "../images/memoji.png";
-import Image from "next/image";
-import Card from "../components/Card";
-import { Fragment } from "react";
-import { Element } from "react-scroll";
+"use client"
+import Background from "../components/Background"
+import SectionHeader from "../components/SectionHeader"
+import avatar from "../images/memoji.png"
+import Image from "next/image"
+import Card from "../components/Card"
+import { Fragment } from "react"
+import { Element } from "react-scroll"
 
 const testimonials = [
     {
@@ -20,7 +20,7 @@ const testimonials = [
         text: "Lorem Ipsum is simply dummy text of the printing,Lorem Ipsum is simply dummy text of the printing,Lorem Ipsum is simply dummy text of the printing",
         avatar: avatar,
     },
-];
+]
 
 const TestimonialsSection = () => {
     return (
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
                 </div>
             </div>
         </Element>
-    );
-};
+    )
+}
 
-export default TestimonialsSection;
+export default TestimonialsSection
