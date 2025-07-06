@@ -6,11 +6,11 @@ import SectionHeader from "../components/SectionHeader"
 import CardHeader from "../components/CardHeader"
 import ExpandableCard from "../components/ExpandableCard"
 import ToolboxRondo from "../components/ToolboxRondo"
-import Map from "../components/Map"
 
 //Package Imports
 import Image from "next/image"
 import { Element } from "react-scroll"
+import dynamic from "next/dynamic"
 
 //Images Imports
 import placeholder from "../images/placeholder.png"
@@ -185,6 +185,11 @@ const hobbies = [
         top: "70%",
     },
 ]
+
+// Dynamically import Map with SSR turned off
+const Map = dynamic(() => import("../components/Map"), {
+    ssr: false,
+})
 
 const AboutSection = () => {
     return (
